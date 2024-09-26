@@ -39,33 +39,7 @@ class Po {
             new THREE.MeshPhongMaterial({ map: loader.load('assets/IMG/six.png')}), //back
         ]
 
-        const cubeInfo = [
-        {
-            texture: "assets/one.png",
-            position: [2, 0.5, -3],
-            rotation: -2
-        },
-
-        {
-            texture: "assets/two.png",
-            position: [2, 0.5, 2],
-            rotation: -2
-        },
-
-        {
-            texture: "assets/three.png",
-            position: [-2, 0.5, 2],
-            rotation: -2
-        },
-        
-        {
-            texture: "assets/four.png",
-            position: [-2, 0.5, -2.5],
-            rotation: -2
-        }
-    ]  
-
-        cubeInfo.forEach((item, index) => {
+        data.cubeInfo.forEach((item, index) => {
             const geometryCube = new THREE.BoxGeometry(1, 1, 1);
 
             this.cube = new THREE.Mesh(geometryCube, materialCube);
